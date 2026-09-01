@@ -6,15 +6,17 @@ This file details the repository links, live application deployment, demo creden
 
 ## Links
 
-- **GitHub repository:** [https://github.com/niloo30/eventhub.git](https://github.com/niloo30/eventhub.git)
-- **Live application:** Deployed locally at `http://localhost:5173` (Frontend) & `http://localhost:5000` (Backend API).
+- **GitHub repository:** [https://github.com/niloo30/eventhub](https://github.com/niloo30/eventhub)
+- **Live Backend API:** [https://eventhub-giu1.onrender.com](https://eventhub-giu1.onrender.com)
+- **Live Frontend:** [https://eventhub-git-main-niloo30s-projects.vercel.app](https://eventhub-git-main-niloo30s-projects.vercel.app)
 
 ---
 
 ## Notes for the Reviewer
 
-- The application is pre-seeded with rich demo data across events, sessions, registrations spanning the last 14 days, staff assignments, timeline audit logs, and at-capacity alerts.
-- To start the backend and frontend dev servers:
+- **⚠️ Cold Start Warning:** The backend is hosted on Render's free tier, which spins down after periods of inactivity. The first request after idle may take **30–60 seconds** to wake up — this is expected behaviour, not a broken deployment. Please wait and refresh.
+- The application is pre-seeded with rich demo data: events, sessions, registrations spanning the last 14 days, staff assignments, timeline audit logs, and at-capacity alerts.
+- To run locally:
   - Backend: `cd server && npm install && npm run seed && npm run dev` (Port 5000)
   - Frontend: `cd client && npm install && npm run dev` (Port 5173)
 
