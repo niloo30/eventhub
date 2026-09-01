@@ -1,7 +1,7 @@
 const API_BASE = import.meta.env.VITE_API_BASE || (
   window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     ? 'http://localhost:5000/api'
-    : '/api'
+    : 'https://eventhub-giu1.onrender.com/api'
 );
 
 async function request(endpoint, options = {}) {
