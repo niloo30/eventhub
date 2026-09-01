@@ -33,6 +33,13 @@ export function AuthProvider({ children }) {
     return res.user;
   };
 
+  const register = async (name, email, password, role) => {
+    const res = await api.register(name, email, password, role);
+    localStorage.setItem('eventhub_token', res.token);
+    setUser(res.user);
+    return res.user;
+  };
+
   const logout = () => {
     localStorage.removeItem('eventhub_token');
     setUser(null);
@@ -42,6 +49,7 @@ export function AuthProvider({ children }) {
     user,
     loading,
     login,
+    register,
     logout,
     isOrganizer: user?.role === 'ORGANIZER',
     isStaff: user?.role === 'CHECKIN_STAFF'

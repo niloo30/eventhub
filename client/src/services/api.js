@@ -32,6 +32,7 @@ async function request(endpoint, options = {}) {
 export const api = {
   // Auth
   login: (email, password) => request('/auth/login', { method: 'POST', body: JSON.stringify({ email, password }) }),
+  register: (name, email, password, role) => request('/auth/register', { method: 'POST', body: JSON.stringify({ name, email, password, role }) }),
   getMe: () => request('/auth/me'),
 
   // Dashboard & Alerts
