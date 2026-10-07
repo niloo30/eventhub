@@ -1,0 +1,4 @@
+Failed to start server: Error: Port 5050 is already in use. Please stop the conflicting process and try again.
+    at tryListen (file:///C:/Users/Ansh%20Rastogi/OneDrive/Desktop/Eventmanager-main/backend/src/server.js:207:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async start (file:///C:/Users/Ansh%20Rastogi/OneDrive/Desktop/Eventmanager-main/backend/src/server.js:214:3)

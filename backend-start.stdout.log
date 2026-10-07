@@ -1,0 +1,122 @@
+
+> ems-backend@1.0.0 dev
+> nodemon src/server.js
+
+[33m[nodemon] 3.1.10[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[dotenv@17.2.1] injecting env (24) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+BullMQ worker ready: email
+BullMQ worker ready: reminder
+BullMQ worker ready: sms
+BullMQ worker ready: refund
+MongoDB connected
+Server running on http://localhost:5050
+[0mGET /api/health [32m200[0m 5.325 ms - 15[0m
+[0mGET /api/health [32m200[0m 1.001 ms - 15[0m
+[0mGET /api/stats/dashboard [36m304[0m 196.703 ms - -[0m
+[0mGET /api/events [36m304[0m 219.916 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 293.219 ms - -[0m
+[0mGET /api/stats/dashboard [36m304[0m 517.138 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 520.985 ms - -[0m
+[0mGET /api/events [36m304[0m 560.876 ms - -[0m
+[0mGET /api/events [36m304[0m 162.349 ms - -[0m
+[0mGET /api/stats/dashboard [32m200[0m 344.679 ms - 150[0m
+[0mGET /api/events [32m200[0m 359.862 ms - -[0m
+[0mGET /api/events [36m304[0m 192.021 ms - -[0m
+[0mGET /api/stats/dashboard [36m304[0m 204.590 ms - -[0m
+[0mGET /api/events [36m304[0m 184.225 ms - -[0m
+[0mGET /api/stats/dashboard [36m304[0m 136.073 ms - -[0m
+[0mGET /api/events [36m304[0m 145.633 ms - -[0m
+[0mGET /api/events [36m304[0m 97.587 ms - -[0m
+[0mGET /api/stats/dashboard [36m304[0m 104.908 ms - -[0m
+[0mGET /api/tickets/shows?type=movie&day=2026-06-30 [32m200[0m 2528.959 ms - -[0m
+[0mGET /api/events [36m304[0m 101.554 ms - -[0m
+[0mGET /api/tickets/shows?type=movie&day=2026-06-30 [36m304[0m 1957.585 ms - -[0m
+[0mGET /api/tickets/shows?type=movie&day=2026-06-30 [36m304[0m 1577.972 ms - -[0m
+[0mGET /api/tickets/shows?type=movie&day=2026-06-30 [36m304[0m 1899.331 ms - -[0m
+[0mPOST /api/auth/login [32m200[0m 5326.462 ms - 306[0m
+[0mPOST /api/auth/login [32m200[0m 4382.851 ms - 306[0m
+[0mPOST /api/auth/otp/verify [32m200[0m 207.027 ms - 419[0m
+[0mGET /api/registrations/me [32m200[0m 363.908 ms - 20[0m
+[0mGET /api/registrations/me [36m304[0m 205.481 ms - -[0m
+[0mGET /api/stats/recommendations [32m200[0m 563.003 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 457.445 ms - -[0m
+[0mGET /api/stats/dashboard [32m200[0m 397.975 ms - 150[0m
+[0mGET /api/stats/recommendations [36m304[0m 490.382 ms - -[0m
+[0mGET /api/events [36m304[0m 503.571 ms - -[0m
+[0mGET /api/stats/dashboard [32m200[0m 206.219 ms - 150[0m
+[0mGET /api/events [36m304[0m 399.040 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 406.256 ms - -[0m
+[0mGET /api/events [36m304[0m 398.414 ms - -[0m
+[0mGET /api/registrations/me [36m304[0m 443.336 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 648.860 ms - -[0m
+[0mGET /api/registrations/me [36m304[0m 302.783 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 295.156 ms - -[0m
+[0mGET /api/registrations/me [36m304[0m 409.116 ms - -[0m
+[0mGET /api/registrations/me [36m304[0m 309.877 ms - -[0m
+[0mGET /api/tickets/my-bookings [32m200[0m 1718.907 ms - -[0m
+[0mGET /api/registrations/me [36m304[0m 203.868 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 303.143 ms - -[0m
+[0mGET /api/registrations/me [36m304[0m 214.228 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 394.248 ms - -[0m
+[0mGET /api/tickets/my-bookings [36m304[0m 1447.236 ms - -[0m
+[0mGET /api/stats/dashboard [36m304[0m 111.725 ms - -[0m
+[0mGET /api/events [36m304[0m 160.532 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 161.097 ms - -[0m
+[0mGET /api/stats/dashboard [36m304[0m 90.617 ms - -[0m
+[0mGET /api/events [36m304[0m 137.464 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 148.568 ms - -[0m
+[0mGET /api/events [36m304[0m 170.280 ms - -[0m
+[0mGET /api/registrations/me [36m304[0m 99.826 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 184.446 ms - -[0m
+[0mGET /api/registrations/me [36m304[0m 108.906 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 161.368 ms - -[0m
+[0mGET /api/tickets/shows?type=movie&day=2026-06-30 [36m304[0m 2338.419 ms - -[0m
+[0mGET /api/tickets/shows?type=movie&day=2026-06-30 [36m304[0m 1805.885 ms - -[0m
+[0mGET /api/location/current [32m200[0m 931.276 ms - 125[0m
+[0mGET /api/registrations/me [36m304[0m 336.510 ms - -[0m
+[0mGET /api/registrations/me [36m304[0m 165.144 ms - -[0m
+[0mGET /api/tickets/my-bookings [36m304[0m 1256.706 ms - -[0m
+[0mGET /api/tickets/my-bookings [36m304[0m 410.099 ms - -[0m
+[0mGET /api/registrations/me [36m304[0m 298.126 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 414.144 ms - -[0m
+[0mGET /api/registrations/me [36m304[0m 303.392 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 391.069 ms - -[0m
+[0mGET /api/registrations/me [32m200[0m 228.309 ms - 20[0m
+[0mGET /api/stats/recommendations [0m-[0m - ms - -[0m
+[0mGET /api/registrations/me [36m304[0m 176.211 ms - -[0m
+[0mGET /api/registrations/me [36m304[0m 326.215 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 587.238 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 276.503 ms - -[0m
+[0mGET /api/registrations/me [32m200[0m 110.248 ms - 20[0m
+[0mGET /api/registrations/me [36m304[0m 89.921 ms - -[0m
+[0mGET /api/stats/recommendations [32m200[0m 555.890 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 139.688 ms - -[0m
+[0mGET /api/registrations/me [36m304[0m 242.740 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 281.371 ms - -[0m
+[0mGET /api/registrations/me [36m304[0m 156.769 ms - -[0m
+[0mGET /api/stats/recommendations [36m304[0m 406.879 ms - -[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[dotenv@17.2.1] injecting env (24) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+BullMQ worker ready: email
+BullMQ worker ready: reminder
+BullMQ worker ready: sms
+BullMQ worker ready: refund
+MongoDB connected
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[dotenv@17.2.1] injecting env (24) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+BullMQ worker ready: email
+BullMQ worker ready: reminder
+BullMQ worker ready: sms
+BullMQ worker ready: refund
+MongoDB connected
+Server running on http://localhost:5050
+[0mGET / [33m404[0m 4.676 ms - 29[0m
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m

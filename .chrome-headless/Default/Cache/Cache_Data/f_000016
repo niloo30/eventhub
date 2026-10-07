@@ -1,0 +1,205 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/dashboard/DashboardUserModal.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=a49de4d3"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=a49de4d3"; const useEffect = __vite__cjsImport3_react["useEffect"];
+export default function DashboardUserModal({
+  open,
+  title,
+  description,
+  users,
+  loading,
+  emptyMessage = "No users found for this section.",
+  onClose
+}) {
+  _s();
+  useEffect(() => {
+    if (!open) return void 0;
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onClose, open]);
+  if (!open) return null;
+  return /* @__PURE__ */ jsxDEV(
+    "div",
+    {
+      className: "fixed inset-0 z-50 flex items-center justify-center bg-slate-950/55 p-4",
+      onClick: onClose,
+      children: /* @__PURE__ */ jsxDEV(
+        "div",
+        {
+          className: "max-h-[85vh] w-full max-w-2xl overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl dark:border-slate-800 dark:bg-slate-900",
+          onClick: (event) => event.stopPropagation(),
+          role: "dialog",
+          "aria-modal": "true",
+          "aria-labelledby": "dashboard-user-modal-title",
+          children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "flex items-start justify-between gap-4 border-b border-slate-200 px-6 py-5 dark:border-slate-800", children: [
+              /* @__PURE__ */ jsxDEV("div", { children: [
+                /* @__PURE__ */ jsxDEV(
+                  "h2",
+                  {
+                    id: "dashboard-user-modal-title",
+                    className: "text-xl font-bold text-slate-900 dark:text-slate-100",
+                    children: title
+                  },
+                  void 0,
+                  false,
+                  {
+                    fileName: "C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx",
+                    lineNumber: 58,
+                    columnNumber: 13
+                  },
+                  this
+                ),
+                description ? /* @__PURE__ */ jsxDEV("p", { className: "mt-1 text-sm text-slate-500 dark:text-slate-400", children: description }, void 0, false, {
+                  fileName: "C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx",
+                  lineNumber: 65,
+                  columnNumber: 13
+                }, this) : null
+              ] }, void 0, true, {
+                fileName: "C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx",
+                lineNumber: 57,
+                columnNumber: 11
+              }, this),
+              /* @__PURE__ */ jsxDEV("button", { className: "btn-outline", type: "button", onClick: onClose, children: "Close" }, void 0, false, {
+                fileName: "C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx",
+                lineNumber: 69,
+                columnNumber: 11
+              }, this)
+            ] }, void 0, true, {
+              fileName: "C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx",
+              lineNumber: 56,
+              columnNumber: 9
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { className: "max-h-[calc(85vh-96px)] overflow-y-auto px-6 py-5", children: loading ? /* @__PURE__ */ jsxDEV("div", { className: "rounded-2xl border border-dashed border-slate-300 p-8 text-center text-sm text-slate-500 dark:border-slate-700 dark:text-slate-400", children: "Loading users..." }, void 0, false, {
+              fileName: "C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx",
+              lineNumber: 76,
+              columnNumber: 11
+            }, this) : users.length === 0 ? /* @__PURE__ */ jsxDEV("div", { className: "rounded-2xl border border-dashed border-slate-300 p-8 text-center text-sm text-slate-500 dark:border-slate-700 dark:text-slate-400", children: emptyMessage }, void 0, false, {
+              fileName: "C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx",
+              lineNumber: 80,
+              columnNumber: 11
+            }, this) : /* @__PURE__ */ jsxDEV("ul", { className: "space-y-3", children: users.map(
+              (entry) => /* @__PURE__ */ jsxDEV(
+                "li",
+                {
+                  className: "rounded-2xl border border-slate-200 px-4 py-3 dark:border-slate-800",
+                  children: [
+                    /* @__PURE__ */ jsxDEV("div", { className: "font-semibold text-slate-900 dark:text-slate-100", children: entry.name || "Unnamed User" }, void 0, false, {
+                      fileName: "C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx",
+                      lineNumber: 90,
+                      columnNumber: 19
+                    }, this),
+                    /* @__PURE__ */ jsxDEV("div", { className: "mt-1 text-sm text-slate-500 dark:text-slate-400", children: entry.email || "No email available" }, void 0, false, {
+                      fileName: "C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx",
+                      lineNumber: 93,
+                      columnNumber: 19
+                    }, this),
+                    typeof entry.registrations === "number" ? /* @__PURE__ */ jsxDEV("div", { className: "mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-600 dark:text-emerald-400", children: [
+                      entry.registrations,
+                      " registration",
+                      entry.registrations === 1 ? "" : "s"
+                    ] }, void 0, true, {
+                      fileName: "C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx",
+                      lineNumber: 97,
+                      columnNumber: 15
+                    }, this) : null,
+                    Array.isArray(entry.events) && entry.events.length > 0 ? /* @__PURE__ */ jsxDEV("div", { className: "mt-3 flex flex-wrap gap-2", children: entry.events.map(
+                      (event) => /* @__PURE__ */ jsxDEV(
+                        "span",
+                        {
+                          className: "rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300",
+                          children: event.title
+                        },
+                        event._id || event.title,
+                        false,
+                        {
+                          fileName: "C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx",
+                          lineNumber: 104,
+                          columnNumber: 17
+                        },
+                        this
+                      )
+                    ) }, void 0, false, {
+                      fileName: "C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx",
+                      lineNumber: 102,
+                      columnNumber: 15
+                    }, this) : null
+                  ]
+                },
+                entry._id || entry.email,
+                true,
+                {
+                  fileName: "C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx",
+                  lineNumber: 86,
+                  columnNumber: 13
+                },
+                this
+              )
+            ) }, void 0, false, {
+              fileName: "C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx",
+              lineNumber: 84,
+              columnNumber: 11
+            }, this) }, void 0, false, {
+              fileName: "C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx",
+              lineNumber: 74,
+              columnNumber: 9
+            }, this)
+          ]
+        },
+        void 0,
+        true,
+        {
+          fileName: "C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx",
+          lineNumber: 49,
+          columnNumber: 7
+        },
+        this
+      )
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx",
+      lineNumber: 45,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_s(DashboardUserModal, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+_c = DashboardUserModal;
+var _c;
+$RefreshReg$(_c, "DashboardUserModal");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/Ansh Rastogi/OneDrive/Desktop/Event-management-system-main/frontend/src/components/dashboard/DashboardUserModal.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBc0NZOzs7Ozs7Ozs7Ozs7Ozs7OztBQXRDWixTQUFTQSxpQkFBaUI7QUFFMUIsd0JBQXdCQyxtQkFBbUI7QUFBQSxFQUN6Q0M7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUMsZUFBZTtBQUFBLEVBQ2ZDO0FBQ0YsR0FBRztBQUFBQyxLQUFBO0FBQ0RULFlBQVUsTUFBTTtBQUNkLFFBQUksQ0FBQ0UsS0FBTSxRQUFPUTtBQUVsQixVQUFNQyxnQkFBZ0JBLENBQUNDLFVBQVU7QUFDL0IsVUFBSUEsTUFBTUMsUUFBUSxTQUFVTCxTQUFRO0FBQUEsSUFDdEM7QUFFQU0sV0FBT0MsaUJBQWlCLFdBQVdKLGFBQWE7QUFDaEQsV0FBTyxNQUFNRyxPQUFPRSxvQkFBb0IsV0FBV0wsYUFBYTtBQUFBLEVBQ2xFLEdBQUcsQ0FBQ0gsU0FBU04sSUFBSSxDQUFDO0FBRWxCLE1BQUksQ0FBQ0EsS0FBTSxRQUFPO0FBRWxCLFNBQ0U7QUFBQSxJQUFDO0FBQUE7QUFBQSxNQUNDLFdBQVU7QUFBQSxNQUNWLFNBQVNNO0FBQUFBLE1BRVQ7QUFBQSxRQUFDO0FBQUE7QUFBQSxVQUNDLFdBQVU7QUFBQSxVQUNWLFNBQVMsQ0FBQ0ksVUFBVUEsTUFBTUssZ0JBQWdCO0FBQUEsVUFDMUMsTUFBSztBQUFBLFVBQ0wsY0FBVztBQUFBLFVBQ1gsbUJBQWdCO0FBQUEsVUFFaEI7QUFBQSxtQ0FBQyxTQUFJLFdBQVUsb0dBQ2I7QUFBQSxxQ0FBQyxTQUNDO0FBQUE7QUFBQSxrQkFBQztBQUFBO0FBQUEsb0JBQ0MsSUFBRztBQUFBLG9CQUNILFdBQVU7QUFBQSxvQkFFVGQ7QUFBQUE7QUFBQUEsa0JBSkg7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGdCQUtBO0FBQUEsZ0JBQ0NDLGNBQ0MsdUJBQUMsT0FBRSxXQUFVLG1EQUFtREEseUJBQWhFO0FBQUE7QUFBQTtBQUFBO0FBQUEsdUJBQTRFLElBQzFFO0FBQUEsbUJBVE47QUFBQTtBQUFBO0FBQUE7QUFBQSxxQkFVQTtBQUFBLGNBRUEsdUJBQUMsWUFBTyxXQUFVLGVBQWMsTUFBSyxVQUFTLFNBQVNJLFNBQVEscUJBQS9EO0FBQUE7QUFBQTtBQUFBO0FBQUEscUJBRUE7QUFBQSxpQkFmRjtBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQWdCQTtBQUFBLFlBRUEsdUJBQUMsU0FBSSxXQUFVLHFEQUNaRixvQkFDQyx1QkFBQyxTQUFJLFdBQVUsc0lBQW9JLGdDQUFuSjtBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQUVBLElBQ0VELE1BQU1hLFdBQVcsSUFDbkIsdUJBQUMsU0FBSSxXQUFVLHNJQUNaWCwwQkFESDtBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQUVBLElBRUEsdUJBQUMsUUFBRyxXQUFVLGFBQ1hGLGdCQUFNYztBQUFBQSxjQUFJLENBQUNDLFVBQ1Y7QUFBQSxnQkFBQztBQUFBO0FBQUEsa0JBRUMsV0FBVTtBQUFBLGtCQUVWO0FBQUEsMkNBQUMsU0FBSSxXQUFVLG9EQUNaQSxnQkFBTUMsUUFBUSxrQkFEakI7QUFBQTtBQUFBO0FBQUE7QUFBQSwyQkFFQTtBQUFBLG9CQUNBLHVCQUFDLFNBQUksV0FBVSxtREFDWkQsZ0JBQU1FLFNBQVMsd0JBRGxCO0FBQUE7QUFBQTtBQUFBO0FBQUEsMkJBRUE7QUFBQSxvQkFDQyxPQUFPRixNQUFNRyxrQkFBa0IsV0FDOUIsdUJBQUMsU0FBSSxXQUFVLGlHQUNaSDtBQUFBQSw0QkFBTUc7QUFBQUEsc0JBQWM7QUFBQSxzQkFBY0gsTUFBTUcsa0JBQWtCLElBQUksS0FBSztBQUFBLHlCQUR0RTtBQUFBO0FBQUE7QUFBQTtBQUFBLDJCQUVBLElBQ0U7QUFBQSxvQkFDSEMsTUFBTUMsUUFBUUwsTUFBTU0sTUFBTSxLQUFLTixNQUFNTSxPQUFPUixTQUFTLElBQ3BELHVCQUFDLFNBQUksV0FBVSw2QkFDWkUsZ0JBQU1NLE9BQU9QO0FBQUFBLHNCQUFJLENBQUNQLFVBQ2pCO0FBQUEsd0JBQUM7QUFBQTtBQUFBLDBCQUVDLFdBQVU7QUFBQSwwQkFFVEEsZ0JBQU1UO0FBQUFBO0FBQUFBLHdCQUhGUyxNQUFNZSxPQUFPZixNQUFNVDtBQUFBQSx3QkFEMUI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxzQkFLQTtBQUFBLG9CQUNELEtBUkg7QUFBQTtBQUFBO0FBQUE7QUFBQSwyQkFTQSxJQUNFO0FBQUE7QUFBQTtBQUFBLGdCQXpCQ2lCLE1BQU1PLE9BQU9QLE1BQU1FO0FBQUFBLGdCQUQxQjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGNBMkJBO0FBQUEsWUFDRCxLQTlCSDtBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQStCQSxLQXpDSjtBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQTJDQTtBQUFBO0FBQUE7QUFBQSxRQXBFRjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsTUFxRUE7QUFBQTtBQUFBLElBekVGO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxFQTBFQTtBQUVKO0FBQUNiLEdBbkd1QlIsb0JBQWtCO0FBQUEyQixLQUFsQjNCO0FBQWtCLElBQUEyQjtBQUFBQyxhQUFBRCxJQUFBIiwibmFtZXMiOlsidXNlRWZmZWN0IiwiRGFzaGJvYXJkVXNlck1vZGFsIiwib3BlbiIsInRpdGxlIiwiZGVzY3JpcHRpb24iLCJ1c2VycyIsImxvYWRpbmciLCJlbXB0eU1lc3NhZ2UiLCJvbkNsb3NlIiwiX3MiLCJ1bmRlZmluZWQiLCJoYW5kbGVLZXlEb3duIiwiZXZlbnQiLCJrZXkiLCJ3aW5kb3ciLCJhZGRFdmVudExpc3RlbmVyIiwicmVtb3ZlRXZlbnRMaXN0ZW5lciIsInN0b3BQcm9wYWdhdGlvbiIsImxlbmd0aCIsIm1hcCIsImVudHJ5IiwibmFtZSIsImVtYWlsIiwicmVnaXN0cmF0aW9ucyIsIkFycmF5IiwiaXNBcnJheSIsImV2ZW50cyIsIl9pZCIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIkRhc2hib2FyZFVzZXJNb2RhbC5qc3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgdXNlRWZmZWN0IH0gZnJvbSAncmVhY3QnO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBEYXNoYm9hcmRVc2VyTW9kYWwoe1xuICBvcGVuLFxuICB0aXRsZSxcbiAgZGVzY3JpcHRpb24sXG4gIHVzZXJzLFxuICBsb2FkaW5nLFxuICBlbXB0eU1lc3NhZ2UgPSAnTm8gdXNlcnMgZm91bmQgZm9yIHRoaXMgc2VjdGlvbi4nLFxuICBvbkNsb3NlLFxufSkge1xuICB1c2VFZmZlY3QoKCkgPT4ge1xuICAgIGlmICghb3BlbikgcmV0dXJuIHVuZGVmaW5lZDtcblxuICAgIGNvbnN0IGhhbmRsZUtleURvd24gPSAoZXZlbnQpID0+IHtcbiAgICAgIGlmIChldmVudC5rZXkgPT09ICdFc2NhcGUnKSBvbkNsb3NlKCk7XG4gICAgfTtcblxuICAgIHdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdrZXlkb3duJywgaGFuZGxlS2V5RG93bik7XG4gICAgcmV0dXJuICgpID0+IHdpbmRvdy5yZW1vdmVFdmVudExpc3RlbmVyKCdrZXlkb3duJywgaGFuZGxlS2V5RG93bik7XG4gIH0sIFtvbkNsb3NlLCBvcGVuXSk7XG5cbiAgaWYgKCFvcGVuKSByZXR1cm4gbnVsbDtcblxuICByZXR1cm4gKFxuICAgIDxkaXZcbiAgICAgIGNsYXNzTmFtZT1cImZpeGVkIGluc2V0LTAgei01MCBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBiZy1zbGF0ZS05NTAvNTUgcC00XCJcbiAgICAgIG9uQ2xpY2s9e29uQ2xvc2V9XG4gICAgPlxuICAgICAgPGRpdlxuICAgICAgICBjbGFzc05hbWU9XCJtYXgtaC1bODV2aF0gdy1mdWxsIG1heC13LTJ4bCBvdmVyZmxvdy1oaWRkZW4gcm91bmRlZC0zeGwgYm9yZGVyIGJvcmRlci1zbGF0ZS0yMDAgYmctd2hpdGUgc2hhZG93LXhsIGRhcms6Ym9yZGVyLXNsYXRlLTgwMCBkYXJrOmJnLXNsYXRlLTkwMFwiXG4gICAgICAgIG9uQ2xpY2s9eyhldmVudCkgPT4gZXZlbnQuc3RvcFByb3BhZ2F0aW9uKCl9XG4gICAgICAgIHJvbGU9XCJkaWFsb2dcIlxuICAgICAgICBhcmlhLW1vZGFsPVwidHJ1ZVwiXG4gICAgICAgIGFyaWEtbGFiZWxsZWRieT1cImRhc2hib2FyZC11c2VyLW1vZGFsLXRpdGxlXCJcbiAgICAgID5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLXN0YXJ0IGp1c3RpZnktYmV0d2VlbiBnYXAtNCBib3JkZXItYiBib3JkZXItc2xhdGUtMjAwIHB4LTYgcHktNSBkYXJrOmJvcmRlci1zbGF0ZS04MDBcIj5cbiAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgPGgyXG4gICAgICAgICAgICAgIGlkPVwiZGFzaGJvYXJkLXVzZXItbW9kYWwtdGl0bGVcIlxuICAgICAgICAgICAgICBjbGFzc05hbWU9XCJ0ZXh0LXhsIGZvbnQtYm9sZCB0ZXh0LXNsYXRlLTkwMCBkYXJrOnRleHQtc2xhdGUtMTAwXCJcbiAgICAgICAgICAgID5cbiAgICAgICAgICAgICAge3RpdGxlfVxuICAgICAgICAgICAgPC9oMj5cbiAgICAgICAgICAgIHtkZXNjcmlwdGlvbiA/IChcbiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwibXQtMSB0ZXh0LXNtIHRleHQtc2xhdGUtNTAwIGRhcms6dGV4dC1zbGF0ZS00MDBcIj57ZGVzY3JpcHRpb259PC9wPlxuICAgICAgICAgICAgKSA6IG51bGx9XG4gICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImJ0bi1vdXRsaW5lXCIgdHlwZT1cImJ1dHRvblwiIG9uQ2xpY2s9e29uQ2xvc2V9PlxuICAgICAgICAgICAgQ2xvc2VcbiAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtYXgtaC1bY2FsYyg4NXZoLTk2cHgpXSBvdmVyZmxvdy15LWF1dG8gcHgtNiBweS01XCI+XG4gICAgICAgICAge2xvYWRpbmcgPyAoXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInJvdW5kZWQtMnhsIGJvcmRlciBib3JkZXItZGFzaGVkIGJvcmRlci1zbGF0ZS0zMDAgcC04IHRleHQtY2VudGVyIHRleHQtc20gdGV4dC1zbGF0ZS01MDAgZGFyazpib3JkZXItc2xhdGUtNzAwIGRhcms6dGV4dC1zbGF0ZS00MDBcIj5cbiAgICAgICAgICAgICAgTG9hZGluZyB1c2Vycy4uLlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgKSA6IHVzZXJzLmxlbmd0aCA9PT0gMCA/IChcbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicm91bmRlZC0yeGwgYm9yZGVyIGJvcmRlci1kYXNoZWQgYm9yZGVyLXNsYXRlLTMwMCBwLTggdGV4dC1jZW50ZXIgdGV4dC1zbSB0ZXh0LXNsYXRlLTUwMCBkYXJrOmJvcmRlci1zbGF0ZS03MDAgZGFyazp0ZXh0LXNsYXRlLTQwMFwiPlxuICAgICAgICAgICAgICB7ZW1wdHlNZXNzYWdlfVxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgKSA6IChcbiAgICAgICAgICAgIDx1bCBjbGFzc05hbWU9XCJzcGFjZS15LTNcIj5cbiAgICAgICAgICAgICAge3VzZXJzLm1hcCgoZW50cnkpID0+IChcbiAgICAgICAgICAgICAgICA8bGlcbiAgICAgICAgICAgICAgICAgIGtleT17ZW50cnkuX2lkIHx8IGVudHJ5LmVtYWlsfVxuICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwicm91bmRlZC0yeGwgYm9yZGVyIGJvcmRlci1zbGF0ZS0yMDAgcHgtNCBweS0zIGRhcms6Ym9yZGVyLXNsYXRlLTgwMFwiXG4gICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmb250LXNlbWlib2xkIHRleHQtc2xhdGUtOTAwIGRhcms6dGV4dC1zbGF0ZS0xMDBcIj5cbiAgICAgICAgICAgICAgICAgICAge2VudHJ5Lm5hbWUgfHwgJ1VubmFtZWQgVXNlcid9XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibXQtMSB0ZXh0LXNtIHRleHQtc2xhdGUtNTAwIGRhcms6dGV4dC1zbGF0ZS00MDBcIj5cbiAgICAgICAgICAgICAgICAgICAge2VudHJ5LmVtYWlsIHx8ICdObyBlbWFpbCBhdmFpbGFibGUnfVxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICB7dHlwZW9mIGVudHJ5LnJlZ2lzdHJhdGlvbnMgPT09ICdudW1iZXInID8gKFxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm10LTIgdGV4dC14cyBmb250LXNlbWlib2xkIHVwcGVyY2FzZSB0cmFja2luZy1bMC4xNmVtXSB0ZXh0LWVtZXJhbGQtNjAwIGRhcms6dGV4dC1lbWVyYWxkLTQwMFwiPlxuICAgICAgICAgICAgICAgICAgICAgIHtlbnRyeS5yZWdpc3RyYXRpb25zfSByZWdpc3RyYXRpb257ZW50cnkucmVnaXN0cmF0aW9ucyA9PT0gMSA/ICcnIDogJ3MnfVxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICkgOiBudWxsfVxuICAgICAgICAgICAgICAgICAge0FycmF5LmlzQXJyYXkoZW50cnkuZXZlbnRzKSAmJiBlbnRyeS5ldmVudHMubGVuZ3RoID4gMCA/IChcbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtdC0zIGZsZXggZmxleC13cmFwIGdhcC0yXCI+XG4gICAgICAgICAgICAgICAgICAgICAge2VudHJ5LmV2ZW50cy5tYXAoKGV2ZW50KSA9PiAoXG4gICAgICAgICAgICAgICAgICAgICAgICA8c3BhblxuICAgICAgICAgICAgICAgICAgICAgICAgICBrZXk9e2V2ZW50Ll9pZCB8fCBldmVudC50aXRsZX1cbiAgICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwicm91bmRlZC1mdWxsIGJvcmRlciBib3JkZXItZW1lcmFsZC0yMDAgYmctZW1lcmFsZC01MCBweC0zIHB5LTEgdGV4dC14cyBmb250LW1lZGl1bSB0ZXh0LWVtZXJhbGQtNzAwIGRhcms6Ym9yZGVyLWVtZXJhbGQtODAwIGRhcms6YmctZW1lcmFsZC05NTAvNDAgZGFyazp0ZXh0LWVtZXJhbGQtMzAwXCJcbiAgICAgICAgICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICAgICAgICAge2V2ZW50LnRpdGxlfVxuICAgICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICAgICkpfVxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICkgOiBudWxsfVxuICAgICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgICkpfVxuICAgICAgICAgICAgPC91bD5cbiAgICAgICAgICApfVxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuICAgIDwvZGl2PlxuICApO1xufVxuIl0sImZpbGUiOiJDOi9Vc2Vycy9BbnNoIFJhc3RvZ2kvT25lRHJpdmUvRGVza3RvcC9FdmVudC1tYW5hZ2VtZW50LXN5c3RlbS1tYWluL2Zyb250ZW5kL3NyYy9jb21wb25lbnRzL2Rhc2hib2FyZC9EYXNoYm9hcmRVc2VyTW9kYWwuanN4In0=

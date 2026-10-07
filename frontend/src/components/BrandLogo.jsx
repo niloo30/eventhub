@@ -1,0 +1,65 @@
+export default function BrandLogo({
+  className = "",
+  showTagline = false,
+}) {
+  return (
+    <div className={`inline-flex items-center gap-3 ${className}`}>
+      <span
+        aria-hidden="true"
+        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl shadow-[0_14px_30px_-18px_rgba(16,185,129,0.85)]"
+      >
+        <svg
+          viewBox="0 0 64 64"
+          className="h-full w-full"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient id="brandGradient" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#34D399" />
+              <stop offset="0.55" stopColor="#10B981" />
+              <stop offset="1" stopColor="#0F766E" />
+            </linearGradient>
+            <linearGradient id="ticketGradient" x1="18" y1="18" x2="46" y2="47" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#FFFFFF" />
+              <stop offset="1" stopColor="#ECFDF5" />
+            </linearGradient>
+          </defs>
+
+          <rect x="4" y="4" width="56" height="56" rx="18" fill="url(#brandGradient)" />
+          <circle cx="49" cy="15" r="7" fill="#F59E0B" />
+          <path
+            d="M22 10.8L23.6 14.2L27 15.8L23.6 17.4L22 20.8L20.4 17.4L17 15.8L20.4 14.2L22 10.8Z"
+            fill="#FFFFFF"
+          />
+          <path
+            d="M18 21C18 18.8 19.8 17 22 17H42C44.2 17 46 18.8 46 21V24.3C43.8 24.8 42.2 26.8 42.2 29C42.2 31.2 43.8 33.2 46 33.7V43C46 45.2 44.2 47 42 47H22C19.8 47 18 45.2 18 43V33.7C20.2 33.2 21.8 31.2 21.8 29C21.8 26.8 20.2 24.8 18 24.3V21Z"
+            fill="url(#ticketGradient)"
+          />
+          <rect x="24" y="24" width="12" height="3" rx="1.5" fill="#0F766E" />
+          <rect x="24" y="31" width="16" height="3" rx="1.5" fill="#6EE7B7" />
+          <circle cx="40.5" cy="34.5" r="7" fill="#10B981" />
+          <path
+            d="M40.5 29.7L42 32.7L45.3 33.2L42.9 35.5L43.5 38.7L40.5 37.1L37.5 38.7L38.1 35.5L35.7 33.2L39 32.7L40.5 29.7Z"
+            fill="#FFFFFF"
+          />
+        </svg>
+      </span>
+
+      <span className="flex min-w-0 flex-col">
+        <span className="truncate text-lg font-black leading-none tracking-tight text-slate-900 dark:text-white">
+          EventManager
+        </span>
+        {showTagline ? (
+          <span className="mt-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-emerald-600 dark:text-emerald-300">
+            Plan. Book. Experience.
+          </span>
+        ) : (
+          <span className="mt-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+            Smart events and ticketing
+          </span>
+        )}
+      </span>
+    </div>
+  );
+}

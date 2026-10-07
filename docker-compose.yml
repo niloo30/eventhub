@@ -1,0 +1,58 @@
+version: "3.9"
+
+services:
+  mongo:
+    image: mongo:7
+    container_name: eventmanager-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  redis:
+    image: redis:7-alpine
+    container_name: eventmanager-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: eventmanager-backend
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 5050
+      MONGO_URI: mongodb://mongo:27017/event_mgmt
+      JWT_SECRET: change-me-in-production
+      CLIENT_URL: http://localhost:5173
+      CLIENT_URLS: http://localhost:5173
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_URL: redis://redis:6379
+    depends_on:
+      - mongo
+      - redis
+    ports:
+      - "5050:5050"
+    volumes:
+      - ./backend/uploads:/app/uploads
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_USE_SAME_ORIGIN: "true"
+    container_name: eventmanager-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "5173:80"
+
+volumes:
+  mongo-data:
